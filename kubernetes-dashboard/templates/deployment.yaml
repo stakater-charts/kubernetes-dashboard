@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: {{ template "kubernetes-dashboard.fullname" . }}
+  name: {{ template "kubernetes-dashboard.name" . }}
   labels:
     app: {{ template "kubernetes-dashboard.name" . }}
     chart: {{ template "kubernetes-dashboard.chart" . }}
@@ -61,7 +61,7 @@ spec:
       volumes:
       - name: kubernetes-dashboard-certs
         secret:
-          secretName: {{ template "kubernetes-dashboard.fullname" . }}
+          secretName: {{ template "kubernetes-dashboard.name" . }}
       - name: tmp-volume
         emptyDir: {}
     {{- if .Values.tolerations }}

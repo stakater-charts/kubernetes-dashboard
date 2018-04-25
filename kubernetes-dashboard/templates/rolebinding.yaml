@@ -10,7 +10,7 @@ metadata:
     chart: {{ template "kubernetes-dashboard.chart" . }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
-  name: {{ template "kubernetes-dashboard.fullname" . }}
+  name: {{ template "kubernetes-dashboard.name" . }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -29,12 +29,12 @@ metadata:
     chart: {{ template "kubernetes-dashboard.chart" . }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
-  name: {{ template "kubernetes-dashboard.fullname" . }}
+  name: {{ template "kubernetes-dashboard.name" . }}
   namespace: {{ .Release.Namespace }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: {{ template "kubernetes-dashboard.fullname" . }}
+  name: {{ template "kubernetes-dashboard.name" . }}
 subjects:
   - kind: ServiceAccount
     name: {{ template "kubernetes-dashboard.serviceAccountName" . }}
