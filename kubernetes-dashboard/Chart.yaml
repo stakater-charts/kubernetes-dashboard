@@ -4,9 +4,9 @@ description: General-purpose web UI for Kubernetes clusters
 keywords:
 - kubernetes
 - dashboard
-home: https://github.com/stakater/chart-kubernetes-dashboard
+home: https://github.com/stakater-charts/kubernetes-dashboard
 sources:
-- https://github.com/stakater/chart-kubernetes-dashboard
+- https://github.com/stakater-charts/kubernetes-dashboard
 maintainers:
 - name: Stakater
   email: stakater@aurorasolutions.io
